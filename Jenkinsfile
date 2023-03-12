@@ -4,22 +4,22 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Maven  Package'
+                echo 'mvn package'
             }
         }
         stage('Test') {
             steps {
-                echo 'Maven test'
+                echo 'mvn test'
             }
         }
         stage('Run') {
             steps {
-                echo 'Maven running'
+                echo 'mvn running'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                archiveArtifacts artifacts: '**/target/*.jar, fingerprint: true'
             }
         }
     }
