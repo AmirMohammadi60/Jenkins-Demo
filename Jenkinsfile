@@ -4,17 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'mvn package'
+                echo 'Building...'
             }
         }
         stage('Test') {
             steps {
-                echo 'mvn test'
-            }
-        }
-        stage('Run') {
-            steps {
-                echo 'mvn running'
+                echo 'Testing...'
             }
         }
         stage('Deploy') {
