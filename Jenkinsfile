@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                archiveArtifacts artifacts: '**/target/*.jar, fingerprint: true'
+                echo 'Deploing..'
             }
         }
     }
