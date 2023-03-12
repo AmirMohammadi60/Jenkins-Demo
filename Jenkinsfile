@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Maven  Package'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo 'Maven test'
             }
         }
         stage('Run') {
             steps {
-                echo 'Running..'
+                echo 'Maven running'
             }
         }
         stage('Deploy') {
